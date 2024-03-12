@@ -4,6 +4,7 @@ class Q5 {
         System.out.print("Enter a string: ");
         Scanner sc=new Scanner(System.in);
         String str1=sc.nextLine();
+        sc.close();
         str1=str1.toUpperCase();
         int vowels=0;
         for (int i = 0; i < str1.length(); i++) {
