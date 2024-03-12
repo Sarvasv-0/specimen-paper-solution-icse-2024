@@ -11,17 +11,17 @@ class Q4 {
         sc.close();
         
         // sorting
-        int min=1;
-        for (int i = 0; i < 10; i++) {
-            int j;
-            for (j = 0; j < 10; j++) {
-                if (arr1[min]<arr1[min-1]) {
-                    min=j;
-                }    
+        for (int i = 0; i < arr1.length-1; i++) {
+            int min=i;
+            for (int j = i+1; j < arr1.length; j++) {
+                if (arr1[min]<arr1[j]) {
+                    min=j;    
+               }
             }
-            int temp=arr1[j];
-            arr1[j]=arr1[min];
-            arr1[min]=temp;
+            // swap
+            int temp=arr1[min];
+            arr1[min]=arr1[i];
+            arr1[i]=temp;
         }
 
         // printing
